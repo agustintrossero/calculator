@@ -1,13 +1,8 @@
-let expressions = {
-    number1: '',
-    number2: '',
-    operator: ''
-}
 
-const add = (number1, number2)=> number1 + number2
-const substract = (number1, number2)=> number1 - number2
-const multiply = (number1, number2)=> number1 * number2
-const divide = (number1, number2)=> number2 === 0? "Cannot divide by zero" : number1 / number2
+const add = (num1, num2)=> num1 + num2
+const substract = (num1, num2)=> num1 - num2
+const multiply = (num1, num2)=> num1 * num2
+const divide = (num1, num2)=> num2 === 0? "Cannot divide by zero" : num1 / num2
 
 function operate(operator, num1, num2) {
     num1 = Number(num1);
@@ -27,3 +22,4 @@ function operate(operator, num1, num2) {
     }
   }
 console.log(operate('multiply',2,33))
+
