@@ -10,34 +10,43 @@
 <body>
     <main>
         <div class="container">
-                <div class="top-buttons display">
+            <div class="top-buttons">
                 <a href="https://github.com/agustintrossero">
                     <img src="./img/GitHubLight.svg" alt="Github Icon" id="github-icon">
                 </a>
-                <button type="button" class="theme-button">
                     <img src="./img/SunIcon.svg" alt="Sun/moon Icon" id="sunMoon-icon">
-                    <img src="./img/MoonIcon.svg" alt="Sun/moon Icon" id="sunMoon-icon">
-                </button>
                 </div>
-                <input name="result" id="result" placeholder="Result" readonly/>
-                <button type="button" class="clear">C</button>
-                <button type="button" class="backspace"><=</button>
-                <button type="button" class="operator">/</button>
-                <button type="button" class="operand">7</button>
-                <button type="button" class="operand">8</button>
-                <button type="button" class="operand">9</button>
-                <button type="button" class="operator">x</button>
-                <button type="button" class="operand">6</button>
-                <button type="button" class="operand">5</button>
-                <button type="button" class="operand">4</button>
-                <button type="button" class="operator">-</button>
-                <button type="button" class="operand">1</button>
-                <button type="button" class="operand">2</button>
-                <button type="button" class="operand">3</button>
-                <button type="button" class="operator">+</button>
-                <button type="button" class="operand">0</button>
-                <button type="button" class="">.</button>
-                <button type="button" class="operator">=</button>
+                    <div class="display">
+                        <input name="result" id="result" placeholder="Result" readonly/>
+                    </div>
+                <div class="row">
+                    <button type="button" class="clear">C</button>
+                    <button type="button" class="backspace"><=</button>
+                    <button type="button" class="operator">/</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="operand">7</button>
+                    <button type="button" class="operand">8</button>
+                    <button type="button" class="operand">9</button>
+                    <button type="button" class="operator">x</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="operand">6</button>
+                    <button type="button" class="operand">5</button>
+                    <button type="button" class="operand">4</button>
+                    <button type="button" class="operator">-</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="operand">1</button>
+                    <button type="button" class="operand">2</button>
+                    <button type="button" class="operand">3</button>
+                    <button type="button" class="operator">+</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="operand zero">0</button>
+                    <button type="button" class="">.</button>
+                    <button type="button" class="operator">=</button>
+                </div>
         </div>
     </main>
     <script src = "app.js"></script>
