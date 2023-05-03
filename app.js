@@ -57,13 +57,24 @@ const updateDisplay = () => {
   current.textContent = expression.a + expression.operator + expression.b;
 };
 
+const clearAll = () => {
+  expression = {
+    a: '',
+    operator: '', 
+    b: '',
+    evaluated: false,
+  }
+};
+
 const handleNumbers = (value, expressionTerm) => {
   return expressionTerm += value;
 }
 
 const handleClick = (value) => {
-
-    if (!expression.operator) {
+    if (value == 'c') {
+      clearAll();
+    } 
+    else if (!expression.operator) {
       expression.a = handleNumbers(value, expression.a);
     }
     else {
