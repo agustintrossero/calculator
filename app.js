@@ -1,25 +1,59 @@
 
-const add = (num1, num2)=> num1 + num2
-const substract = (num1, num2)=> num1 - num2
-const multiply = (num1, num2)=> num1 * num2
-const divide = (num1, num2)=> num2 === 0? "Cannot divide by zero" : num1 / num2
+const current = document.querySelector('.screen');
+const buttonNodeList = document.querySelectorAll('button');
 
-function operate(operator, num1, num2) {
-    num1 = Number(num1);
-    num2 = Number(num2);
-    switch (operator) {
-      case 'add':
-        return add(num1, num2);
-        break;
-      case 'subtract':
-        return subtract(num1, num2);
-        break;
-      case 'multiply':
-        return multiply(num1, num2);
-        break;
-      case 'divide':
-        return divide(num1, num2);
+let expression = {
+  a: '',
+  operator: '', 
+  b: '',
+  evaluated: false,
+}
+
+const sum = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => {
+  if (a / b == 'Infinity' || a / b == '-Infinity') {
+    return 'Error';
+  }
+  return a / b;
+}
+
+const operate = (expression) => {
+  let a = parseFloat(expression.a)
+  let b = parseFloat(expression.b)
+  let result;
+  if (expression.operator == '+') { 
+    result = sum(a, b);
+  } 
+  else if (expression.operator == '-') {
+    result = subtract(a, b);
+  }
+  else if (expression.operator == '*') {
+    result = multiply(a, b);
+  }
+  else if (expression.operator == '/') {
+    result = divide(a, b);
+  }
+  result = result || 0;
+  if (result != 'Error') {
+    if (result % 1 != 0) {
+      return parseFloat(result.toFixed(4));
     }
   }
-console.log(operate('multiply',2,33))
+  return result;
+};
+
+buttonNodeList.forEach(item => {
+  window.addEventListener('keydown', (e) => {
+    console.log(e.key, item);
+  })
+  item.addEventListener('click', (e) => {
+    console.log(e.target.value, item);
+  })
+})
+
+const updateDisplay = () => {
+  current.textContent = expression.a + expression.operator + expression.b;
+};
 

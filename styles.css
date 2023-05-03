@@ -78,16 +78,20 @@ button:hover{
 .clear, .zero{
     width: 150px;
 }
+
 .clear{
-    background-color: rgb(243, 28, 28);
-}
-.clear:hover{
     background-color: rgb(240, 83, 83);
+}
+
+.clear:hover{
+    background-color: rgb(243, 28, 28);
 }
 
 .operator{
     background-color: rgba(236, 173, 55, 0.6);
 }
+
 .operator:hover{
     background-color: rgb(235, 160, 23);
 }
+
