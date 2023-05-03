@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Calculator</title>
 </head>
 <body>
     <main>
-        <div class="top-container">
-            <div class="top-buttons">
-              <a href="https://github.com/agustintrossero">
-                <img src="" alt="Github Icon" id="github-icon">
-              </a>
-              <button type="button" class="theme-button">
-                <img src="" alt="Sun/moon Icon" id="sunMoon-icon">
-              </button>
-            </div>
+        <div class="container">
+                <div class="top-buttons display">
+                <a href="https://github.com/agustintrossero">
+                    <img src="./img/GitHubLight.svg" alt="Github Icon" id="github-icon">
+                </a>
+                <button type="button" class="theme-button">
+                    <img src="./img/SunIcon.svg" alt="Sun/moon Icon" id="sunMoon-icon">
+                    <img src="./img/MoonIcon.svg" alt="Sun/moon Icon" id="sunMoon-icon">
+                </button>
+                </div>
+                <input name="result" id="result" placeholder="Result" readonly/>
+                <button type="button" class="clear">C</button>
+                <button type="button" class="backspace"><=</button>
+                <button type="button" class="operator">/</button>
+                <button type="button" class="operand">7</button>
+                <button type="button" class="operand">8</button>
+                <button type="button" class="operand">9</button>
+                <button type="button" class="operator">x</button>
+                <button type="button" class="operand">6</button>
+                <button type="button" class="operand">5</button>
+                <button type="button" class="operand">4</button>
+                <button type="button" class="operator">-</button>
+                <button type="button" class="operand">1</button>
+                <button type="button" class="operand">2</button>
+                <button type="button" class="operand">3</button>
+                <button type="button" class="operator">+</button>
+                <button type="button" class="operand">0</button>
+                <button type="button" class="">.</button>
+                <button type="button" class="operator">=</button>
         </div>
-        <div class="display"></div>
-            <input name="result" id="result" placeholder="Result" readonly/>
-            <input name="histoy" id="histoy" placeholder="Histoy" readonly/>
-            <button type="button" class="clear">C</button>
-            <button type="button" class="backspace"><=</button>
-            <button type="button" class="operator">/</button>
-            <button type="button" class="operand">7</button>
-            <button type="button" class="operand">8</button>
-            <button type="button" class="operand">9</button>
-            <button type="button" class="operator">x</button>
-            <button type="button" class="operand">6</button>
-            <button type="button" class="operand">5</button>
-            <button type="button" class="operand">4</button>
-            <button type="button" class="operator">-</button>
-            <button type="button" class="operand">1</button>
-            <button type="button" class="operand">2</button>
-            <button type="button" class="operand">3</button>
-            <button type="button" class="operator">+</button>
-            <button type="button" class="operand">0</button>
-            <button type="button" class="">.</button>
-            <button type="button" class="operator">=</button>
-        </div>
-      </main>
+    </main>
     <script src = "app.js"></script>
 </body>
 </html>
