@@ -46,10 +46,10 @@ const operate = (expression) => {
 
 buttonNodeList.forEach(item => {
   window.addEventListener('keydown', (e) => {
-    console.log(e.key, item);
+    //console.log(e.key, item);
   })
   item.addEventListener('click', (e) => {
-    console.log(e.target.value, item);
+    handleClick(e.target.value, item);
   })
 })
 
@@ -57,3 +57,17 @@ const updateDisplay = () => {
   current.textContent = expression.a + expression.operator + expression.b;
 };
 
+const handleNumbers = (value, expressionTerm) => {
+  return expressionTerm += value;
+}
+
+const handleClick = (value) => {
+
+    if (!expression.operator) {
+      expression.a = handleNumbers(value, expression.a);
+    }
+    else {
+      expression.b = handleNumbers(value, expression.b);
+    }
+  updateDisplay();
+}
