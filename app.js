@@ -110,6 +110,23 @@ const handleOperators = (value) => {
   }
 }
 
+const handleDecimalPoint = (expressionTerm) => {
+  if (expressionTerm[expressionTerm.length - 1] == '.') {
+    return expressionTerm = removeLastDigit(expressionTerm);
+  }
+  else if (!expressionTerm) {
+    return expressionTerm = '0.';
+  }
+  else {
+    if (!expressionTerm.includes('.')) {
+      return expressionTerm += '.';
+    }
+    else {
+      return expressionTerm;
+    }
+  }
+}
+
 const handleEquals = () => {
   if (!expression.b) {
     return ;
@@ -134,6 +151,19 @@ const handleClick = (value) => {
     }
     else if( value == '<='){
       handleBackspace();
+    }
+    else if (value == '.') {
+      if (!expression.operator) {
+        if (expression.evaluated == true) {
+          if (!expression.a.includes('.')) {
+            expression.evaluated = false;
+          }
+        }
+        expression.a = handleDecimalPoint(expression.a);
+      }
+      else {
+        expression.b = handleDecimalPoint(expression.b);
+      }
     }
     else {
       if (expression.evaluated == true) {
