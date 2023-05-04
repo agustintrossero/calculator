@@ -96,6 +96,18 @@ const handleOperators = (value) => {
   }
 }
 
+const handleEquals = () => {
+  if (!expression.b) {
+    return ;
+  }
+  else {
+    expression.a = operate(expression).toString();
+    expression.operator = '';
+    expression.b = '';
+    expression.evaluated = true;
+  }
+}
+
 const handleClick = (value) => {
     if (value == 'c') {
       clearAll();
@@ -103,11 +115,20 @@ const handleClick = (value) => {
     else if (['+', '-', '*', '/'].includes(value)) {
       handleOperators(value);
     }
-    else if (!expression.operator) {
-      expression.a = handleNumbers(value, expression.a);
+    else if( value == '='){
+      handleEquals();
     }
     else {
-      expression.b = handleNumbers(value, expression.b);
+      if (expression.evaluated == true) {
+        clearAll();
+      }
+      if (!expression.operator) {
+        expression.a = handleNumbers(value, expression.a);
+      }
+      else {
+        expression.b = handleNumbers(value, expression.b);
+      }
     }
-  updateDisplay();
-}
+    updateDisplay();
+  }
+
