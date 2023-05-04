@@ -66,6 +66,20 @@ const clearAll = () => {
   }
 };
 
+const removeLastDigit = (n) => {
+  return n.slice(0, n.length - 1);
+};
+
+const handleBackspace = () => {
+  if (!expression.operator){
+    expression.a = removeLastDigit(expression.a);
+  } else if (!expression.b) {
+    expression.operator = removeLastDigit(expression.operator);
+  } else {
+    expression.b = removeLastDigit(expression.b);
+  };
+};
+
 const handleNumbers = (value, expressionTerm) => {
   return expressionTerm += value;
 }
@@ -117,6 +131,9 @@ const handleClick = (value) => {
     }
     else if( value == '='){
       handleEquals();
+    }
+    else if( value == '<='){
+      handleBackspace();
     }
     else {
       if (expression.evaluated == true) {
