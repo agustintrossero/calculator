@@ -1,5 +1,5 @@
 
-const current = document.querySelector('.screen');
+const screen = document.querySelector('.screen');
 const buttonNodeList = document.querySelectorAll('button');
 
 let expression = {
@@ -54,7 +54,7 @@ buttonNodeList.forEach(item => {
 })
 
 const updateDisplay = () => {
-  current.textContent = expression.a + expression.operator + expression.b;
+  screen.textContent = expression.a + expression.operator + expression.b;
 };
 
 const clearAll = () => {
@@ -64,6 +64,10 @@ const clearAll = () => {
     b: '',
     evaluated: false,
   }
+};
+
+const checkError = () => {
+  expression.a == 'Error' ? clearAll() : null;
 };
 
 const removeLastDigit = (n) => {
@@ -140,6 +144,7 @@ const handleEquals = () => {
 }
 
 const handleClick = (value) => {
+    checkError();
     if (value == 'c') {
       clearAll();
     }
