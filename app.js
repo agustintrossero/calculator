@@ -70,10 +70,39 @@ const handleNumbers = (value, expressionTerm) => {
   return expressionTerm += value;
 }
 
+const handleOperators = (value) => {
+  if (!expression.a) {
+    return ;
+  }
+  else {
+    if (!expression.operator) {
+      expression.evaluated = false;
+    }
+    else {
+      if (!expression.b) {
+        expression.operator = value;
+      }
+      else {
+        expression.a = operate(expression).toString();
+        expression.b = '';
+      }
+    }
+    if (expression.a == 'Error') {
+      expression.operator = '';
+    }
+    else {
+      expression.operator = value;
+    }
+  }
+}
+
 const handleClick = (value) => {
     if (value == 'c') {
       clearAll();
-    } 
+    }
+    else if (['+', '-', '*', '/'].includes(value)) {
+      handleOperators(value);
+    }
     else if (!expression.operator) {
       expression.a = handleNumbers(value, expression.a);
     }
