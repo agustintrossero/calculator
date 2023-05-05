@@ -208,3 +208,22 @@ const handleClick = (value) => {
     updateDisplay();
   }
 
+
+const lightMode = document.getElementById('sun-icon')
+const background = document.querySelector('main')
+const calculatorBody = document.querySelector('.container')
+const calculatorScreen = document.querySelector('.display')
+const buttons = document.querySelectorAll('button')
+const operand = document.querySelectorAll('.operand')
+
+lightMode.addEventListener('click',() => {
+  operand.forEach(item => {
+    item.classList.toggle('operand-light');
+  })
+  background.classList.toggle('background-light');
+  calculatorBody.classList.toggle('container-light');
+  calculatorScreen.classList.toggle('display-light');
+  buttons.forEach(item => {
+    item.classList.toggle('button-light');
+  })
+})

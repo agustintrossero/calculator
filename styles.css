@@ -94,10 +94,21 @@ button:hover{
 }
 
 .operator{
-    background-color: rgba(236, 173, 55, 0.6);
+    background-color: rgb(187, 135, 38);
 }
 
 .operator:hover{
     background-color: rgb(235, 160, 23);
 }
 
+.operand-light, .background-light, .container-light, .display-light{
+    background-color: aqua;
+}
+
+.display-light {
+    border-color: rgb(47, 51, 50);
+}
+
+.button-light{
+    color: rgb(47, 51, 50);
+}
