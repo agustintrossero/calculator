@@ -64,14 +64,16 @@ a{
     align-items: center;
     border: 1px rgb(255, 255, 255, .4);
     border-style: solid none;
-    word-wrap: break-word;
-    word-break: break-all;
     transition: 0.8s all;
+    overflow: hidden;
 }
 
 .screen{
     font-size: 50px;
     color:rgb(235, 160, 23);
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 100%;
 }
 
 #result{
@@ -126,7 +128,7 @@ button:hover{
 }
 
 .background-light{
-    background-color: rgb(127, 243, 247);
+    background-color: rgb(199, 248, 250);
     transition: 0.8s all;
 }
 
