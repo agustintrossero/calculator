@@ -46,12 +46,13 @@ const operate = (expression) => {
 
 buttonNodeList.forEach(item => {
   window.addEventListener('keydown', (e) => {
-    //console.log(e.key, item);
+    handleKeyboard(e.key, item);
   })
   item.addEventListener('click', (e) => {
     handleClick(e.target.value, item);
   })
 })
+
 
 const updateDisplay = () => {
   screen.textContent = expression.a + expression.operator + expression.b;
@@ -127,9 +128,9 @@ const handleDecimalPoint = (expressionTerm) => {
     }
     else {
       return expressionTerm;
-    }
-  }
-}
+    };
+  };
+};
 
 const handleEquals = () => {
   if (!expression.b) {
@@ -142,6 +143,29 @@ const handleEquals = () => {
     expression.evaluated = true;
   }
 }
+
+const handleKeyboard = (key, item) =>{
+  if (key == 'c') {
+    if (item.value == 'c') {
+      item.click();
+    }
+  }
+  else if (key == "Backspace"){
+    if (item.value == "<="){
+      item.click();
+    }
+  }
+  else if (key == 'Enter') {
+    if (item.value == '=') {
+      item.click();
+    }
+  }
+  else {
+    if (key == item.value) {
+      item.click();
+    }
+  }
+};
 
 const handleClick = (value) => {
     checkError();

@@ -45,12 +45,14 @@ a{
     padding: 5px;
     margin: 5px;
     width: 100%;
-    height: 100px;
+    min-height: 10vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border: 1px rgb(255, 255, 255, .4);
     border-style: solid none;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .screen{
