@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9ca11c8f30.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <title>Calculator</title>
 </head>
 <body>
     <main>
         <div class="container">
             <div class="top-buttons">
-                <a href="https://github.com/agustintrossero">
+                <a href="https://github.com/agustintrossero/calculator">
                     <i class="fa-brands fa-github" id="github-icon"></i>
                 </a>
                     <i class="fa-solid fa-sun" id="sun-icon" alt></i>
@@ -44,7 +45,7 @@
                 <button class="operator" value="+">+</button>
             </div>
             <div class="row">
-                <button class="operand zero" value="0">0</button>
+                <button class="operand" id="zero" value="0">0</button>
                 <button class="dot operand" value=".">.</button>
                 <button class="operator" value="=">=</button>
             </div>

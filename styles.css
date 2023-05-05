@@ -13,6 +13,7 @@ main {
     height: 100vh;
     overflow: hidden;
     background-color: rgb(50, 40, 40);
+    transition: 0.8s all;
 }
 
 .container {
@@ -25,6 +26,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    transition: 0.8s all;
 }
 
 .row{
@@ -34,10 +36,21 @@ main {
 .top-buttons {
     color: #fff;
     font-size: x-large;
+    transition: 0.8s all;
+    height: 26px;
 }
+
 a{
     text-decoration: none;
     color: inherit;
+}
+
+.fa-github, .fa-sun, .fa-moon{
+    cursor: pointer;
+    padding: 5px 40px 0px 10px;
+    height: 18px;
+    width: 18px;
+
 }
 
 .display{
@@ -53,6 +66,7 @@ a{
     border-style: solid none;
     word-wrap: break-word;
     word-break: break-all;
+    transition: 0.8s all;
 }
 
 .screen{
@@ -66,8 +80,9 @@ a{
 
 button{
     padding: 25px;
-    color: rgb(255, 255, 255);
-    font-size: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
     cursor: pointer;
     width: 70px;
     background-color: rgb(47, 51, 50);
@@ -81,16 +96,20 @@ button:hover{
     background-color: rgb(88, 95, 93);
 }
 
-.clear, .zero{
+.clear{
+    width: 150px;
+}
+
+#zero{
     width: 150px;
 }
 
 .clear{
-    background-color: rgb(240, 83, 83);
+    background-color: rgb(240, 63, 63);
 }
 
 .clear:hover{
-    background-color: rgb(243, 28, 28);
+    background-color: rgb(204, 33, 33);
 }
 
 .operator{
@@ -101,8 +120,14 @@ button:hover{
     background-color: rgb(235, 160, 23);
 }
 
-.operand-light, .background-light, .container-light, .display-light{
-    background-color: aqua;
+.container-light, .display-light{
+   background-color: rgb(157, 197, 197);
+   transition: 0.8s all;
+}
+
+.background-light{
+    background-color: rgb(127, 243, 247);
+    transition: 0.8s all;
 }
 
 .display-light {
@@ -111,4 +136,35 @@ button:hover{
 
 .button-light{
     color: rgb(47, 51, 50);
+}
+
+.operand-light{
+    background-color: #fff;
+}
+
+.operand-light:hover{
+    background-color: rgb(200, 198, 207);
+    color: rgb(0, 0, 0);
+}
+
+.operator-light{
+    background-color: rgb(235, 160, 23);
+}
+
+.operator-light:hover{
+    background-color: rgb(187, 135, 38);
+}
+
+.clear-light{
+    background-color: rgb(204, 33, 33);
+    color: #fff;
+}
+
+.clear-light:hover{
+    background-color: rgb(240, 63, 63);
+}
+
+.top-buttons-light{
+    color:rgb(0, 0, 0);
+    transition: 0.8s all;
 }

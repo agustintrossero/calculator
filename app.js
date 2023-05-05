@@ -215,6 +215,9 @@ const calculatorBody = document.querySelector('.container')
 const calculatorScreen = document.querySelector('.display')
 const buttons = document.querySelectorAll('button')
 const operand = document.querySelectorAll('.operand')
+const operator = document.querySelectorAll('.operator')
+const clear = document.querySelector('.clear')
+const topButtons = document.querySelector('.top-buttons')
 
 lightMode.addEventListener('click',() => {
   operand.forEach(item => {
@@ -226,4 +229,11 @@ lightMode.addEventListener('click',() => {
   buttons.forEach(item => {
     item.classList.toggle('button-light');
   })
+  operator.forEach(item => {
+    item.classList.toggle('operator-light');
+  })
+  clear.classList.toggle('clear-light');
+  lightMode.classList.toggle('fa-moon');
+  topButtons.classList.toggle('top-buttons-light');
 })
+
