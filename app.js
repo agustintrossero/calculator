@@ -86,7 +86,13 @@ const handleBackspace = () => {
 };
 
 const handleNumbers = (value, expressionTerm) => {
-  return expressionTerm += value;
+  if (expression.a == '0') {
+   return expression.a = ''}
+  if (expression.b == '0') {
+    return expression.b = '0'}
+  else {
+      return expressionTerm += value;
+   }
 }
 
 const handleOperators = (value) => {
